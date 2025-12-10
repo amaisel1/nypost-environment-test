@@ -2,7 +2,7 @@ d3.csv("Environment_Wildlife_Stories_Cleaned.csv")
   .then(function(data) {
       console.log("CSV loaded:", data.length + " rows");
 
-      // Clean BOM + whitespace issues
+      
 data.forEach(d => {
   d.original_headline = d.headline ? d.headline.trim() : "";
   d.original_excerpt = d.excerpt ? d.excerpt.trim() : "";
@@ -45,7 +45,7 @@ function runEnter() {
   }
 }
 
-      runEnter();
+      
   })
   .catch(function(error) {
       console.log("Error loading CSV:", error);
