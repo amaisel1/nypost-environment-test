@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html lang=”en”>
+<html lang="en">
 <head>
-<script src=”app.js”></script>
-<script src=”https://d3js.org/d3.v5.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
-<link rel="stylesheet" href="styles.css" />
-<meta charset=”UTF-8">
-<meta name=”viewport” content=”width=device-width, initial-scale=1.0">
-<title>NYPOST ENVIRO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYPOST ENVIRO</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<body>
-<div class=”container”>
-<div class=”row”>
-<div class=”col-md-12">
-<h1 class=>Search dataset!</h1>
-<h2 class=>Enter a keyword and find articles</h2>
-<form id=”form”>
-<input class=”form-control” id=”user-input” placeholder='enter term'>
-<button id=”button” class=”btn btn-secondary”>search</button>
-</form>
-<table class="table" cellpadding="10">
-<thead>
-<tr>
-<th scope="col">#</th>
-<th scope="col">Headline</th>
-<th scope="col">Excerpt</th>
-<th scope="col">Publish Date</th>
-</tr>
-</thead>
-<tbody>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1>Search dataset!</h1>
+            <h2>Enter a keyword and find articles</h2>
+
+            <form id="form">
+                <input class="form-control" id="user-input" placeholder="enter term">
+                <button id="button" class="btn btn-secondary">search</button>
+            </form>
+
+            <table class="table" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Headline</th>
+                        <th>Excerpt</th>
+                        <th>Publish Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
 </div>
-</div>
-</div>
+
+<script src="app.js"></script>
 </body>
 </html>
