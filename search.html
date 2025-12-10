@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYPOST ENVIRO</title>
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1>NYPOST'S ENVIRONMENT AND WILDLIFE</h1>
+    <hr>
+    <h2>Search dataset!</h2>
+    <a href="https://amaisel1.github.io/nypost-environment-test/index.html">read about this dataset</a> <br>
+    <a href="Environment_Wildlife_Stories_Cleaned.csv" download>download this dataset</a> <br>
+    <a href="https://huggingface.co/alapoodle/nypost-environment-headlines">view the ai model</a>
+    <h2>Enter a keyword and find articles</h2>
+
+    <form id="form">
+        <input id="user-input" class="form-control" placeholder="Enter keyword">
+        <button id="button" type="submit" class="btn">Search</button>
+    </form>
+
+    <table class="table" cellpadding="10">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Headline</th>
+                <th>Excerpt</th>
+                <th>Publish Date</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="./app.js"></script>
+<br><br><br><br><footer> by alana maisel 2025</footer>
+</body>
+</html>
