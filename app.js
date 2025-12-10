@@ -1,5 +1,5 @@
 d3.csv(“Environment_Wildlife_Stories_Cleaned.csv”).then(function (data) {
-var movies = data;
+var article = data;
 var button = d3.select(“#button”);
 var form = d3.select(“#form”);
 button.on(“click”, runEnter);
@@ -17,20 +17,19 @@ d3.event.preventDefault();
 var inputValue = d3.select(“#user-input”).property("value");
 
 // This code will filter the movies looking at the actors column. It will store the values when there is a match from the text sequence the user entered and the text from our actors column from the CSV data.
-var filteredMovies = 
-movies.filter(movies => movies.actors.includes(inputValue));
+var filteredArticles = 
+article.filter(articles => articles.headline.includes(inputValue));
 
 // This was the easiest approach I found to sort the results by a different column in descending order. I had to include a new script in my head to use the _.sortBy 
 This is the script:  
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
-var output = _.sortBy(filteredMovies, ‘avg_vote’).reverse()
+var output = _.sortBy(filteredArticles, ‘avg_vote’).reverse()
 // Once I had all the values in my output variable, all I needed was to loop through them and add them to the table one by one. This was done using d3, where I inserted the value for each one of the columns I wanted using the necessary html to fit each table row.
-for (var i = 0; i < filteredMovies.length; i++) {
+for (var i = 0; i < filteredArticles.length; i++) {
 d3.select(“tbody”).insert(“tr”).html(
 “<td>” + [i+1] + ”</td>” +
-”<td>” + (output[i][‘original_title’])+”</a>”+“</td>” + 
-”<td>” + (output[i][‘avg_vote’])+”</td>” +
-”<td>” + (output[i][‘year’])+”</td>” +
-”<td>” + (output[i][‘description’])+”</td” ) }
+”<td>” + (output[i][‘headline’])+”</a>”+“</td>” + 
+”<td>” + (output[i][‘excerpt’])+”</td>” +
+”<td>” + (output[i]['display date'])+”</td>” +
 };
 });
