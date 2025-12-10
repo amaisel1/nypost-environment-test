@@ -1,0 +1,80 @@
+/* General page styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #222;
+}
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: #444;
+}
+
+/* Table (assuming your “# Movie Rating Year Description” is table-like) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+table th {
+  background-color: #eee;
+  color: #222;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form / input (if you have an input box for actor name) */
+input[type="text"] {
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5em;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Container / layout tweaks */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
