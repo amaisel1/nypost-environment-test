@@ -18,6 +18,11 @@ h1 {
   user-select: none;
 }
 
+.container > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .image-container {
   width: 300px;
   height: 200px;
