@@ -55,7 +55,37 @@ h2 {
   color: #000;
 }
 
-
+        .ticker-container {
+            position: fixed;
+            top: 70%;
+            left: 0;
+            right: 0;
+            font-family: sans-serif;
+            box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .ticker-container ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            animation: scroll 10s linear infinite;
+        }
+        
+        .ticker-container ul li {
+            white-space: nowrap;
+            padding: 10px 24px;
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-66.666%);
+            }
+        }
 table {
   width: 100%;
   border-collapse: collapse;
